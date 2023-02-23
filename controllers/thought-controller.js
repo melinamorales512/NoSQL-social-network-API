@@ -8,7 +8,7 @@ const thoughtController = {
       .catch((err) => res.status(500).json(err));
   },
   
-  getSinglethought(req, res) {
+  getThoughtById(req, res) {
     Thoughts.findOne({ _id: req.params.thoughtId })
       .select('-__v')
       .then((Thought) =>
@@ -28,7 +28,7 @@ const thoughtController = {
       });
   },
   
-  deleteThought(req, res) {
+  removeThought(req, res) {
     Thought.findOneAndDelete({ _id: req.params.thoughtId })
       .then((thought) =>
         !thought
@@ -39,7 +39,7 @@ const thoughtController = {
       .catch((err) => res.status(500).json(err));
   },
   
-  createReaction({params, body}, res) {
+  addReaction({params, body}, res) {
     Thought.findOneAndUpdate(
       {_id: params.thoughtId}, 
       {$push: {reactions: body}}, 
