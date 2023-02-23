@@ -1,6 +1,8 @@
-const {Schema, model} = require('mongoose');
+const {Schema,model} = require('mongoose');
 const moment = require('moment');
 const UserSchema = new Schema({
+
+
     username: {
         type: String,
         unique: true,
@@ -15,7 +17,7 @@ const UserSchema = new Schema({
             validator: function (v) {
                 return /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(v);
             },
-            message: props => `${props.value} is not a valid email address!`
+            message: props => `${props.value} this is not a authorizate email!`
         },
     },
     thoughts: [{
@@ -37,6 +39,7 @@ const UserSchema = new Schema({
 UserSchema.virtual('friendCount').get(function () {
     return this.friends.length;
 });
+
 
 const User = model('User', UserSchema);
 
