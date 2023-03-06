@@ -18,7 +18,14 @@ This is a set of API for a social network that uses a MongoDB database so that t
 
 You must have mongoDB installed
 ## Usage
-Run the following at the command line- npm init -y
+
+Download the repo files from the link below
+You must have mongoDB installed
+Run the following at the command line
+    - npm init -y
+    - npm install express
+    - npm install mongoose
+    - npm install moment
 
 ## Contributing
 
