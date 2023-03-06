@@ -17,6 +17,7 @@ This is a set of API for a social network that uses a MongoDB database so that t
 ## Installation
 
 You must have mongoDB installed
+
 ## Usage
 
 Download the repo files from the link below
