@@ -21,11 +21,17 @@ You must have mongoDB installed
 ## Usage
 
 Download the repo files from the link below
+
 You must have mongoDB installed
+
 Run the following at the command line
+
     - npm init -y
+    
     - npm install express
+    
     - npm install mongoose
+    
     - npm install moment
 
 ## Contributing
